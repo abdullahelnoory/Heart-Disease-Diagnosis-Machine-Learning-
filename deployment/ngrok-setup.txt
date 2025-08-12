@@ -1,6 +1,0 @@
-Steps :-
-
-  1 - Download Ngrok from the official website .
-  2 - Add the executable folder of Ngrok to environment paths .
-  3 - Deploy ./ui/app.py using streamlit .
-  4 - Run (Ngrok http {Port}) on the terminal .
