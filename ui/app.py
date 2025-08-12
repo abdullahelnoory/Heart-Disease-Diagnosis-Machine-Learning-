@@ -4,10 +4,10 @@ import pandas as pd
 
 str.title('Heart Disease Diagnosis Prediction')
 
-age = str.number_input("Age")
+age = str.number_input("Age (In years)")
 sex = str.selectbox("Sex", ("Male", "Female"))
 cp = str.selectbox("Chest Pain", (1, 2, 3, 4))
-trestbps = str.number_input("Resting Blood Pressure")
+trestbps = str.number_input("Resting Blood Pressure (In mm Hg)")
 chol = str.number_input("Serum cholesterol")
 fbs = str.selectbox("Fasting blood sugar", ("True", "False"))
 restecg = str.selectbox("Resting electrocardiographic results", (0, 2))
@@ -75,6 +75,16 @@ if num == 0:
 else:
     result = "presence"
 
-str.write("Heart Disease Diagnosis : " + result)
+if result == "presence":
+    str.markdown(
+        f"<h2 style='color: red; text-align: center;'>Heart Disease Diagnosis: {result.capitalize()}</h2>",
+        unsafe_allow_html=True
+    )
+else:
+    str.markdown(
+        f"<h2 style='color: green; text-align: center;''>Heart Disease Diagnosis: {result.capitalize()}</h2>",
+        unsafe_allow_html=True
+    )
+
 
 
